@@ -6,7 +6,6 @@
 	</div>
 	<% end %>
 	<br>
-	<!-- <div class="large-4 columns"> -->
 	<div class="large-12 columns panel" data-equalizer-watch>
 		<h3>Do Not Disturb(DND) Checker JSON API </h3>
 		<p>Here you can check Indian Mobile Numbers for DND servise.</p>
@@ -27,9 +26,8 @@
 			</p>
 		</div>
 		
-		
-			<hr>
-			<div class="large-6">
+		<hr>
+		<div class="large-6">
 			<b>API Test:</b><br><br>
 			<%= form_tag("/check", method: "post") do %>
 			  <%= label_tag(:mobile_number, "Mobile Number:") %>
