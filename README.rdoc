@@ -1,28 +1,18 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Do Not Disturb(DND) Checker JSON API
 
-Things you may want to cover:
+Here you can check Indian Mobile Numbers for DND servise.
+API Use:
 
-* Ruby version
+Make a get request
+http://localhost:3000/api?mobile_number=9876543210
 
-* System dependencies
+You can also Make a curl request:
+$ curl http://localhost:3000/api?mobile_number=9876543210
 
-* Configuration
+API JSON Response:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+{"mobile_number" : "9876543210", "operator" : "Airtel", "circle" : "Punjab",
+"status" : "Registered", "dateOfActivation" : "07-10-2013",
+"preference" : "Fully Blocked"}
