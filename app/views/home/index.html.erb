@@ -1,0 +1,43 @@
+	<br>
+	<% if flash[:notice]%>
+	<div data-alert class="alert-box info round">
+	  <b><%= flash[:notice] %></b>
+	  <a href="#" class="close">&times;</a>
+	</div>
+	<% end %>
+	<br>
+	<!-- <div class="large-4 columns"> -->
+	<div class="large-12 columns panel" data-equalizer-watch>
+		<h3>Do Not Disturb(DND) Checker JSON API </h3>
+		<p>Here you can check Indian Mobile Numbers for DND servise.</p>
+		<hr>
+		<div class="large-8" >
+			<b>API Use:</b><br>
+			<p>Make a get request
+			<br><%= root_url%>api?mobile_number=9876543210
+			<br><br>
+			You can also Make a curl request:<br>
+			$ curl <%= root_url%>api?mobile_number=9876543210
+			</p>
+			<br>
+
+			<b>API JSON Response: </b><br>
+			<p>
+				{"mobile_number" : "9876543210", "operator" : "Airtel", "circle" : "Punjab",<br>"status" : "Registered", "dateOfActivation" : "07-10-2013",<br>"preference" : "Fully Blocked"}
+			</p>
+		</div>
+		
+		
+			<hr>
+			<div class="large-6">
+			<b>API Test:</b><br><br>
+			<%= form_tag("/check", method: "post") do %>
+			  <%= label_tag(:mobile_number, "Mobile Number:") %>
+			  <%= text_field_tag(:mobile_number) %>
+			  <%= submit_tag("Check DND", :class =>"button [tiny radius round]") %>
+			<% end %>
+		</div>
+	</div>
+
+
+	
